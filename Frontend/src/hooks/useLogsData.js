@@ -20,7 +20,7 @@ export const useLogsData = (timeRange, filters = {}) => {
           ...filters
         });
 
-        const response = await fetch(`http://localhost:5000/api/logs?${params}`);
+        const response = await fetch(`https://driftal-7ayf.onrender.com/api/logs?${params}`);
         const data = await response.json();
         
         setLogs(data.logs);

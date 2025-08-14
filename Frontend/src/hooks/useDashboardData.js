@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import { baseApi } from '../utils/baseApi';
+
+
 
 export const useDashboardData = (timeRange) => {
   const [metrics, setMetrics] = useState(null);
@@ -12,8 +15,8 @@ export const useDashboardData = (timeRange) => {
       try {
         // Replace mock data with real API calls
         const [metricsRes, chartRes] = await Promise.all([
-          fetch(`http://localhost:5000/api/dashboard/metrics?timeRange=${timeRange}`),
-          fetch(`http://localhost:5000/api/dashboard/chart-data?timeRange=${timeRange}`)
+          fetch(`https://driftal-7ayf.onrender.com/api/dashboard/metrics?timeRange=${timeRange}`),
+          fetch(`https://driftal-7ayf.onrender.com/api/dashboard/chart-data?timeRange=${timeRange}`)
         ]);
 
         const newMetrics = await metricsRes.json();

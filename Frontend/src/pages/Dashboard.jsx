@@ -4,9 +4,9 @@ import Layout from '../components/layout/Layout';
 import MetricsCard from '../components/dashboard/MetricsCard';
 import ChartCard from '../components/dashboard/ChartCard';
 import TimeFilter from '../components/dashboard/TimeFilter';
-import LogsTable from '../components/logs/LogsTable';
 import { useDashboardData } from '../hooks/useDashboardData';
 import { useLogsData } from '../hooks/useLogsData';
+import LogsTable from '../components/logs/LogsTable';
 
 const Dashboard = () => {
   const [timeRange, setTimeRange] = useState('day');
