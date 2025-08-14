@@ -6,7 +6,7 @@ import ChartCard from '../components/dashboard/ChartCard';
 import TimeFilter from '../components/dashboard/TimeFilter';
 import { useDashboardData } from '../hooks/useDashboardData';
 import { useLogsData } from '../hooks/useLogsData';
-import {LogsTable} from '../components/logs/LogsTable';
+import {LogsTable} from '../components/logs/LogsTable.jsx';
 
 const Dashboard = () => {
   const [timeRange, setTimeRange] = useState('day');
