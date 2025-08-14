@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Filter, Search, MoreVertical } from 'lucide-react';
-import StatusTag from '../logs/StatusTag';
-import FiltersModal from '../logs/FiltersModal';
+import StatusTag from './StatusTag';
+import FiltersModal from './FiltersModal';
 
 const LogsTable = ({ logs, totalLogs, loading, currentPage, totalPages, onPageChange }) => {
   const [columnFilters, setColumnFilters] = useState({
