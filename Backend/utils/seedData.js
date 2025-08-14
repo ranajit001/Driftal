@@ -42,7 +42,7 @@ const sampleLogs = [
 ];
 
 // Function to seed the database
-const seedDatabase = async () => {
+export const seedDatabase = async () => {
   try {
     await connectDB();
     
@@ -72,4 +72,4 @@ const seedDatabase = async () => {
   }
 };
 
-seedDatabase();
+

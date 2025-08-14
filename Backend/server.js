@@ -6,6 +6,7 @@ import cors from 'cors';
 // Import routes
 import dashboardRoutes from './routes/dashboard.js';
 import logsRoutes from './routes/logs.js';
+import { seedDatabase } from './utils/seedData.js';
 
 // Load environment variables
 dotenv.config();
@@ -40,6 +41,7 @@ app.use('/api/logs', logsRoutes);
 // Start server
 app.listen(PORT, async() => {
     await connectDB();
+    await seedDatabase();
   console.log(` Server running on port ${PORT}`);
   console.log(` Dashboard API: http://localhost:${PORT}/api/dashboard`);
   console.log(` Logs API: http://localhost:${PORT}/api/logs`);
