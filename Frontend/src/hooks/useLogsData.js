@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-
+import { baseApi } from '../utils/baseApi';
 export const useLogsData = (timeRange, filters = {}) => {
   const [logs, setLogs] = useState([]);
   const [totalLogs, setTotalLogs] = useState(0);
@@ -20,8 +20,9 @@ export const useLogsData = (timeRange, filters = {}) => {
           ...filters
         });
 
-        const response = await fetch(`https://driftal-7ayf.onrender.com/api/logs?${params}`);
+        const response = await fetch(`${baseApi}/api/logs?${params}`);
         const data = await response.json();
+        console.log(data,'ddddaaaatttaaa');
         
         setLogs(data.logs);
         setTotalLogs(data.totalLogs);

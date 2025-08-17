@@ -15,8 +15,8 @@ export const useDashboardData = (timeRange) => {
       try {
         // Replace mock data with real API calls
         const [metricsRes, chartRes] = await Promise.all([
-          fetch(`https://driftal-7ayf.onrender.com/api/dashboard/metrics?timeRange=${timeRange}`),
-          fetch(`https://driftal-7ayf.onrender.com/api/dashboard/chart-data?timeRange=${timeRange}`)
+          fetch(`${baseApi}/api/dashboard/metrics?timeRange=${timeRange}`),
+          fetch(`${baseApi}/api/dashboard/chart-data?timeRange=${timeRange}`)
         ]);
 
         const newMetrics = await metricsRes.json();
