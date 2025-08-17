@@ -65,7 +65,6 @@ export const seedDatabase = async () => {
     await InterfaceLog.insertMany(logs);
     console.log('Database seeded with 100 sample logs');
     
-    process.exit(0);
   } catch (error) {
     console.error('Error seeding database:', error);
     process.exit(1);
